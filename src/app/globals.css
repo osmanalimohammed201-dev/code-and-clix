@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg-primary: #08090D;
+  --color-bg-secondary: #11131B;
+  --color-accent-purple: #8B5CF6;
+  --color-accent-cyan: #22D3EE;
+  --color-text-primary: #F8FAFC;
+  --color-text-muted: #A1A1AA;
+  --color-border-subtle: #272A36;
+
+  --font-heading: var(--font-space-grotesk), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+
+  --bg-primary: #08090D;
+  --bg-secondary: #11131B;
+  --accent-purple: #8B5CF6;
+  --accent-cyan: #22D3EE;
+  --text-primary: #F8FAFC;
+  --text-muted: #A1A1AA;
+  --border-subtle: #272A36;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+/* Glassmorphism surface utilities */
+.glass-surface {
+  background-color: rgba(17, 19, 27, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(39, 42, 54, 0.8);
+}
+
+.glass-surface-subtle {
+  background-color: rgba(8, 9, 13, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(39, 42, 54, 0.5);
+}
+
+/* Restrained glow utilities */
+.glow-purple {
+  box-shadow: 0 0 30px -10px rgba(139, 92, 246, 0.28);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 30px -10px rgba(34, 211, 238, 0.28);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 24px rgba(34, 211, 238, 0.4);
+}
+
+.glow-text-purple {
+  text-shadow: 0 0 24px rgba(139, 92, 246, 0.4);
+}
+
+/* Skip link — visually hidden until focused (keyboard a11y) */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-accent-cyan);
+  color: var(--color-bg-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  z-index: 9999;
+  border-radius: 0 0 0.5rem 0;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Interactive focus styles */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-accent-cyan);
+  outline-offset: 2px;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
