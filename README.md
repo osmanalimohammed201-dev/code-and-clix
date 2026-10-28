@@ -34,3 +34,24 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Mosaic-inspired studio redesign
+
+The existing Next.js App Router, TypeScript, Tailwind, and React Three Fiber stack is retained. The redesigned sections use a near-black, warm-white, and cyan palette, numbered services, original illustrative concept previews, a scroll-highlighted process, and a modular 3D C hero. Motion uses the existing React Three Fiber renderer and browser animation APIs; no animation dependencies were added.
+
+### Run locally
+
+```sh
+npm ci
+npm run dev
+```
+
+Open http://localhost:3000. For a production check, run `npm run lint`, `npx tsc --noEmit`, and `npm run build`, then `npm start`.
+
+### Content and delivery
+
+- Portfolio visuals are clearly labelled illustrative concept previews. Replace them with genuine project screenshots when available.
+- The contact form validates required fields and prepares an email addressed to the existing `codeandclix@gmail.com` contact. The visitor must send it through their email app. No website backend or delivery confirmation is implemented.
+- Mobile, reduced-motion, unavailable WebGL, and rendering-error states use a static CSS sculpture. The canvas pauses when offscreen or when the document is hidden.
+- The live Mosaic reference was unavailable during implementation; design direction used the supplied recording and brief.
+- Production build, TypeScript, and ESLint were checked. Browser visual and interaction QA could not be completed because the browser download failed in the implementation environment. Check desktop/mobile layouts and actual WebGL rendering before publishing.
