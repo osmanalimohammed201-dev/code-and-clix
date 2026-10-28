@@ -37,16 +37,15 @@ export default function RootLayout({
       lang="en"
       className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#08090D] text-[#F8FAFC]">
+      <body className="min-h-full flex flex-col bg-[#090B0D] text-[#F4F1EA]">
         {/* Skip to main content — keyboard / screen reader accessibility */}
-        <a
-          href="#main-content"
-          className="skip-link"
-        >
+        <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
         <Navbar />
-        <main id="main-content" className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
